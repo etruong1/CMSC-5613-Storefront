@@ -1,8 +1,7 @@
 #include "Product.h"
 
-void Product::calcTotalPrice() {
-	// TODO - implement Product::calcTotalPrice
-	throw "Not yet implemented";
+float Product::calcTotalPrice() {
+	return this->basePrice * this->salePercent;
 }
 
 void Product::setSalePercent(float s) {
@@ -14,7 +13,13 @@ void Product::calcAvgRating() {
 	throw "Not yet implemented";
 }
 
-void Product::calcTotalQuantity() {
+int Product::calcTotalQuantity() {
 	// TODO - implement Product::calcTotalQuantity
 	throw "Not yet implemented";
+}
+
+void Product::removeColorQty(IColor* color) {
+	if (this->totalQuantity > 0) {
+		this->totalQuantity -= color->calcColorQuantity();
+	}
 }

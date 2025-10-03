@@ -1,28 +1,44 @@
 #ifndef ORDER_H
 #define ORDER_H
 
+#include <string>
+
+class IOrder {
+
+public:
+	virtual ~IOrder() = default;
+	virtual float calcSubtotal() = 0;
+};
+
 class Order {
 
 private:
-	String orderID;
-	date date;
+	std::string orderID;
+	time_t date;
 	float cost;
-	String deliveryMethod;
-	String paymentMethod;
-	String status;
+	std::string deliveryMethod;
+	std::string paymentMethod;
+	std::string status;
+	IOrder* iOrder;
 
 public:
-	void calcSubtotal();
+	Order() {}
 
-	void calcShippingCost();
+	Order(std::string orderID, time_t date, float cost, std::string deliveryMethod, 
+	std::string paymentMethod, std::string , IOrder* iOrder) : orderID{orderID}, date{date}, cost{cost},
+	deliveryMethod{deliveryMethod}, paymentMethod{paymentMethod}, status{status}, iOrder{iOrder} {}
 
-	void calcTax();
+	float calcSubtotal();
+
+	float calcShippingCost();
+
+	float calcTax();
 
 	void calcTotalCost();
 
 	void applyCoupon();
 
-	void setStatus(String s);
+	void setStatus(std::string s);
 };
 
 #endif

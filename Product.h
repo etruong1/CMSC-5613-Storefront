@@ -1,25 +1,37 @@
 #ifndef PRODUCT_H
 #define PRODUCT_H
 
+#include <string>
+#include "Color.h"
+
 class Product {
 
 private:
-	String productID;
-	String name;
+	std::string productID;
+	std::string name;
 	float basePrice;
 	float salePercent;
 	int totalQuantity;
 	float avgRating;
-	String description;
+	std::string description;
 
 public:
-	void calcTotalPrice();
+	Product() {}
+
+	Product(std::string productID, std::string name, float basePrice, float salePercent,
+		int totalQuantity, float avgRating, std::string description) : productID{productID},
+		name{name}, basePrice{basePrice}, salePercent{salePercent}, totalQuantity{totalQuantity},
+		avgRating{avgRating}, description{description} {}
+	
+	float calcTotalPrice();
 
 	void setSalePercent(float s);
 
 	void calcAvgRating();
 
-	void calcTotalQuantity();
+	int calcTotalQuantity();
+
+	void removeColorQty(IColor* color);
 };
 
 #endif

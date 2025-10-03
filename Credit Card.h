@@ -1,12 +1,14 @@
 #ifndef CREDIT CARD_H
 #define CREDIT CARD_H
 
+#include <string>
+
 class Credit_Card : Payment {
 
 private:
-	String cardNumber;
-	String expDate;
-	String type;
+	std::string cardNumber;
+	std::string expDate;
+	std::string type;
 };
 
 #endif

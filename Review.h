@@ -1,12 +1,14 @@
 #ifndef REVIEW_H
 #define REVIEW_H
 
+#include <string>
+
 class Review {
 
 private:
 	float rating;
-	date date;
-	String reviewText;
+	time_t date;
+	std::string reviewText;
 };
 
 #endif

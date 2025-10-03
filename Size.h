@@ -1,11 +1,16 @@
 #ifndef SIZE_H
 #define SIZE_H
 
+#include <string>
+
 class Size {
 
 private:
-	String sizeName;
+	std::string sizeName;
 	int sizeQuantity;
+
+public:
+	int getSizeQuantity();
 };
 
 #endif

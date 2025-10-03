@@ -1,16 +1,25 @@
 #include "Order.h"
+#include <ctime>
 
-void Order::calcSubtotal() {
+float Order::calcSubtotal() {
 	// TODO - implement Order::calcSubtotal
 	throw "Not yet implemented";
 }
 
-void Order::calcShippingCost() {
-	// TODO - implement Order::calcShippingCost
-	throw "Not yet implemented";
+float Order::calcShippingCost() {
+	// If subtotal is over $100, no shipping cost
+	if (iOrder->calcSubtotal() > 100.0)
+	{
+		return 0.0;
+	}
+	// Else, set shipping cost to default of $7.0
+	else
+	{
+		return 7.0;
+	}
 }
 
-void Order::calcTax() {
+float Order::calcTax() {
 	// TODO - implement Order::calcTax
 	throw "Not yet implemented";
 }
@@ -25,6 +34,6 @@ void Order::applyCoupon() {
 	throw "Not yet implemented";
 }
 
-void Order::setStatus(String s) {
+void Order::setStatus(std::string s) {
 	this->status = s;
 }

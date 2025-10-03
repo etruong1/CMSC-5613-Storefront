@@ -1,10 +1,12 @@
 #ifndef PROMOTION_H
 #define PROMOTION_H
 
+#include <string>
+
 class Promotion {
 
 private:
-	String description;
+	std::string description;
 	float salePercent;
 
 public:

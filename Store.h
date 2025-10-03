@@ -1,10 +1,12 @@
 #ifndef STORE_H
 #define STORE_H
 
+#include <string>
+
 class Store {
 
 private:
-	String address;
+	std::string address;
 
 public:
 	void addProduct(Product p);

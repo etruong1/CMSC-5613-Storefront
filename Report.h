@@ -1,11 +1,13 @@
 #ifndef REPORT_H
 #define REPORT_H
 
+#include <string>
+
 class Report {
 
 private:
-	String type;
-	date date;
+	std::string type;
+	time_t date;
 };
 
 #endif

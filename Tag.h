@@ -1,10 +1,12 @@
 #ifndef TAG_H
 #define TAG_H
 
+#include <string>
+
 class Tag {
 
 private:
-	String tagName;
+	std::string tagName;
 };
 
 #endif

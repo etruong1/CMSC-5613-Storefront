@@ -1,13 +1,15 @@
 #ifndef RETURN_H
 #define RETURN_H
 
+#include <string>
+
 class Return {
 
 private:
-	String returnID;
-	String returnMethod;
+	std::string returnID;
+	std::string returnMethod;
 	float shippingCost;
-	String comment;
+	std::string comment;
 
 public:
 	void calcShippingCost();

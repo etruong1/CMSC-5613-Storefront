@@ -1,24 +1,26 @@
 #ifndef USER_H
 #define USER_H
 
+#include <string>
+
 class User {
 
 private:
-	String name;
-	String address;
-	String email;
-	String phoneNumber;
-	String userID;
-	String username;
-	String password;
-	String role;
+	std::string name;
+	std::string address;
+	std::string email;
+	std::string phoneNumber;
+	std::string userID;
+	std::string username;
+	std::string password;
+	std::string role;
 
 public:
-	void setEmail(String s);
+	void setEmail(std::string s);
 
-	void setPhoneNumber(String s);
+	void setPhoneNumber(std::string s);
 
-	void setPassword(String s);
+	void setPassword(std::string s);
 };
 
 #endif
